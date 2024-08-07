@@ -8,3 +8,9 @@ def solution(arr):
             else:
                 answer = 1
     return answer
+
+
+# 다른 풀이
+
+def solution(arr):
+    return int(arr == list(map(list, zip(*arr))))
