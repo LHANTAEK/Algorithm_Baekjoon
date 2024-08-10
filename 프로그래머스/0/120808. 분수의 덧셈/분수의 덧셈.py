@@ -1,23 +1,23 @@
-def gcd(a, b):
-    while b:
-        a, b = b, a % b
-    return a
-
 def solution(numer1, denom1, numer2, denom2):
-    # 분모의 최소공배수 계산
-    lcm = (denom1 * denom2) // gcd(denom1, denom2)
+    import math
     
-    # 분자 계산
-    numer = (numer1 * (lcm // denom1)) + (numer2 * (lcm // denom2))
-    denom = lcm
+    numer = numer1 * denom2 + numer2 * denom1
+    denom = denom1 * denom2
+    gcd = math.gcd(numer, denom)
     
-    # 기약분수로 만들기
-    divisor = gcd(numer, denom)
-    numer //= divisor
-    denom //= divisor
-    
-    return [numer, denom]
+    return [numer / gcd, denom / gcd]
 
+
+
+
+# 유클리드 알고리즘 // import math ... math.gcd 없이 최대공약수 구하는 알고리즘
+# def gcd(a, b):
+#     while b:
+#         a, b = b, a % b
+#     return a
+
+
+# 처음 풀이
 # def solution(numer1, denom1, numer2, denom2):
 #     answer = []
 #     if denom1 % denom2 == 0 or denom2 % denom1 == 0:
