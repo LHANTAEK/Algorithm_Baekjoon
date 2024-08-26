@@ -1,21 +1,9 @@
 def solution(quiz):
-    result = []
-    for equation in quiz:
-        left, right = equation.split('=')
-        x, op, y = left.strip().split()
-        
-        x = int(x)
-        y = int(y)
-        z = int(right.strip())
-        
-        if op == '+':
-            calculated = x + y
-        elif op == '-':
-            calculated = x - y
-        
-        if calculated == z:
-            result.append("O")
+    answer = []
+    for i in quiz:
+        split_list = i.split('=')
+        if eval(split_list[0]) == eval(split_list[1]):
+            answer.append("O")
         else:
-            result.append("X")
-    
-    return result
+            answer.append("X")
+    return answer
