@@ -10,5 +10,5 @@ def solution(sizes):
         max_width = max(max_width, width)
         max_height = max(max_height, height)
     
-    # 가장 큰 가로 길이와 세로 길이를 곱하여 지갑의 크기 반환
+    # 가장 큰 가로 길이와 세로 길이를 곱하기
     return max_width * max_height
