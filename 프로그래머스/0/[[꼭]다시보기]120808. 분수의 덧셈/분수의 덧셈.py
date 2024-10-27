@@ -1,3 +1,4 @@
+# math 라이브러리의 최대공약수를 구하는 gcd 모듈을 통해서 쉽게 풀이 가능
 def solution(numer1, denom1, numer2, denom2):
     import math
     
