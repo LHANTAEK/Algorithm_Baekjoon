@@ -10,8 +10,7 @@ def solution(numbers, direction):
     return numbers
 
 
-
-# collections 함수의 deque를 이용해서 풀 수도 있더라..
+# deque를 이용해서 푸는 법
 from collections import deque
 
 def solution(numbers, direction):
