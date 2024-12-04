@@ -1,3 +1,4 @@
+# 로직 이해하기
 def solution(emergency):
     answer = []
     answer_list = list(enumerate(emergency))
